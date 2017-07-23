@@ -18,23 +18,51 @@
 
 The lab will take place in RR15.
 
-## Essential References
+# Grading
+
+Grading will be done using weekly exercise sheets.
+At the beginning of each lab you are ask to mark which exercises you have solved by yourself *and* prepared for presentation.
+Marking an exercises therefore not only means that you have a solution, but are also able to explain it to the class and answer questions related to the exercise and its context.
+To pass this PS you have to:
+
+- Mark at least 65% of all exercises (excluding bonus exercises).
+- Receive at least one positive grade for a presentation.
+
+Note that exercises can build on-top of each other -- even across exercise sheets.
+Solutions will *not* be provided, organise yourself with your fellow students if you are missing crucial material.
+
+Each of the folders `ex01`, `ex02`, ... represents on exercise sheet.
+Exercise tasks and material are located within these folders.
+
+You do not have to submit your solution unless stated explicitly by the exercise.
+
+## Presentation
+
+How exactly you present your solution is up to you.
+Just be prepared to fit your explanation in a 20 minute slot.
+While a computer is provided by the ZID you are recommended to bring your own laptop along.
+Please check if your system is compatible with the installed projector before the lab starts.
+VGA connection only.
+
+> In ZID we do not trust.
+
+# Essential References
 
 - [C++ 14 Standard (Draft)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [cppreference.com](http://en.cppreference.com)
 
-## Useful References / Tools
+# Useful References / Tools
 
 - [Awesome Modern C++](https://github.com/rigtorp/awesome-modern-cpp)
-- [Doxygen](http://www.stack.nl/~dimitri/doxygen/)
-- [Boost](http://www.boost.org/)
-- [CMake](https://cmake.org/)
+- [Doxygen](http://www.stack.nl/~dimitri/doxygen)
+- [Boost](http://www.boost.org)
+- [CMake](https://cmake.org)
 - [Clang Format](http://clang.llvm.org/docs/ClangFormat.html)
 - [Clang Sanitizers](https://clang.llvm.org/docs/UsersManual.html#controlling-code-generation)
 - [Clang Tidy](http://clang.llvm.org/extra/clang-tidy/)
 - [Curated List of Awesome C/C++ Stuff](https://github.com/fffaraz/awesome-cpp)
 - [Google Test](https://github.com/google/googletest)
 - [Modern C++ Features](https://github.com/AnthonyCalandra/modern-cpp-features)
-- [Online C++ Demangler](https://demangler.com/)
-- [STL Containers](http://www.cplusplus.com/reference/stl/)
+- [Online C++ Demangler](https://demangler.com)
+- [STL Containers](http://en.cppreference.com/w/cpp/container)
