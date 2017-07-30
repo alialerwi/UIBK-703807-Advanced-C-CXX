@@ -1,4 +1,4 @@
-# Exercise Sheet 1
+# Exercise Sheet 1 -- Infrastructure
 
 *due on 20 October 2017*
 
@@ -49,7 +49,7 @@ Your unit tests should go in a separate file `stack_tests.cpp`.
 Google Test gives you the possibility to compile your unit tests into an executable
 To do this, compile both source files and link with the `gtest_main` library.
 
-Finally, take a look at the provided options by runing the executable with `--help` as argument.
+Finally, take a look at the provided options by running the executable with `--help` as argument.
 
 ## Task 4
 
@@ -87,10 +87,18 @@ Setup yourself with a development environment / text editor which supports the f
 - Jump to line.
 - Jump to symbol.
 - Jump to file.
+- Jump to definition / declaration.
+- Find all references.
+- Compile with one shortcut.
 - Quickly switch between header / source file.
-- Jump to defintion / declaration.
-- *Semantic auto-completion*, provides (umong others) auto-completion based on the type it is invoked on.
+- *Semantic auto-completion*, provides (among others) auto-completion based on the type it is invoked on.
 - Debugger integration.
 
 Generally speaking it is not *required* to have such a development environment to develop C++ programs.
 Yet it helps inexperienced programs to become productive more quickly.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+![Firelink Shrine](../gfx/firelink_shrine.jpg)
+
+> A safe haven for the unkindled lies in reach.
