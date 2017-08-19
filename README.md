@@ -57,10 +57,10 @@ VGA is the only way to connect your laptop with the projector.
 If you have questions or want to know more about a certain topic I am always glad to help.
 You can find me in room 2W05 of the ICT building.
 
-You can also contact by via email, just be sure to send it from your univeristy account.
+You can also contact by via email, just be sure to send it from your university account.
 Please keep your email informal and include the course number in the subject.
 
-[:envelope: send email](mailto:alexander.hirsch@uibk.ac.at?subject=703807%20-%20)
+[:mail: send email](mailto:alexander.hirsch@uibk.ac.at?subject=703807%20-%20)
 
 # Essential References
 
