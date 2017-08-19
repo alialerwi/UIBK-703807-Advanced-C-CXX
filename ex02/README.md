@@ -32,7 +32,7 @@ The file [`SPECIFICATION.md`](SPECIFICATION.md) elaborates these bullets in more
 Furthermore, your implementation is only allowed to use:
 
 - C++ standard library (C++14 standard)
-- Boost Library
+- Boost library
 - `diff` command
 - `patch` command
 
@@ -58,3 +58,8 @@ Think about ways to prevent yourself from doing the same mistakes again in futur
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
+![Iudex Gundyr](../gfx/iudex_gundyr.jpg)
+
+> Gundyr, corrupted by the abyss, spends eternity testing unkindled to see if they are worthy to Link the Flame.
+> He was once an unkindled himself but arose too late to fulfill his duty, never meeting his Fire Keeper, who had been buried within the tower behind Firelink Shrine with the Estus Ring.
+> The flame had already gone out and the bells failed to ring which started a new dark age.
