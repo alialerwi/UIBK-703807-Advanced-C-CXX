@@ -12,7 +12,7 @@ Additionally, picking up a few books will help getting used to common C++ idioms
 
 ## Task 1
 
-Install G++ or Clang and compile the provided file `hello.cpp`.
+Install G++ or Clang and compile the provided file `hello.cc`.
 Be sure to install a version that supports C++14.
 When compiling specify the following flags:
 
@@ -21,7 +21,7 @@ When compiling specify the following flags:
 If you are a Windows user, you may instead want to use the compiler which comes along with Visual Studio.
 Adjust the compile flags accordingly.
 
-Next, setup [Boost] on your system and compile the provided file `hello_boost.cpp`.
+Next, setup [Boost] on your system and compile the provided file `hello_boost.cc`.
 Boost is commonly used and provides you with a set of useful C++ libraries.
 Some of its content is even promoted into the C++ standard library.
 
@@ -29,9 +29,9 @@ Some of its content is even promoted into the C++ standard library.
 
 ## Task 2
 
-Install the Clang compiler and run it on the provided file `vec.cpp` using the following command:
+Install the Clang compiler and run it on the provided file `vec.cc` using the following command:
 
-    $ clang -std=c++14 -Xclang -ast-dump -fsyntax-only -Wno-vexing-parse vec.cpp
+    $ clang -std=c++14 -Xclang -ast-dump -fsyntax-only -Wno-vexing-parse vec.cc
 
 Clang will parse the input file and display its abstract syntax tree (AST).
 In the bottom half of the output you can find the function declaration of `main` followed by its `CompoundStmt`.
@@ -45,7 +45,7 @@ G++ also provides some mechanisms to dump internal representations.
 ## Task 3
 
 Setup [Google Test] and write a basic set of unit tests for the provided stack implementation.
-Your unit tests should go in a separate file `stack_test.cpp`.
+Your unit tests should go in a separate file `stack_test.cc`.
 
 [Google Test]: (https://github.com/google/googletest)
 
