@@ -2,7 +2,4 @@
 
 #include <iostream>
 
-void foo()
-{
-	std::cout << "Function foo called" << std::endl;
-}
+void foo() { std::cout << "Function foo called" << std::endl; }

@@ -1,3 +1,6 @@
-#pragma once
+#ifndef UIBK_703807_EX01_TASK4_BAZ_H_
+#define UIBK_703807_EX01_TASK4_BAZ_H_
 
 void baz();
+
+#endif  // UIBK_703807_EX01_TASK4_BAZ_H_

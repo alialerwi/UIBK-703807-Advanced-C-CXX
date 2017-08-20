@@ -58,7 +58,7 @@ The three folders `libFoo`, `libBar`, and `libBaz` each contain a header and sou
 Furthermore, the library in `libBaz` depends on the library in `libBar`.
 `app` contains a single source file providing a `main` function and depends on all libraries.
 
-Use a build systems (like [GNU Make], [Autotools], [CMake], [Ninja], [Meson], [Shake], ...) to build libraries and application.
+Use a build systems (ex [GNU Make], [Autotools], [CMake], [Ninja], [Meson], [Shake], ...) to build libraries and application.
 Be sure to model all dependencies correctly in your setup.
 The following criteria should be met:
 
@@ -72,7 +72,7 @@ The following criteria should be met:
 - *Out of source build*, all generated files (`.o`, `.so`, ...) are placed in a separate folder outside the source directory.
 - Automatically determine file dependencies.
   If a header file is touched, the build system should know which object files need to be rebuilt.
-- Easily enable linking with rPath
+- Easily enable linking with rPath.
 - Utilise multiple processor cores for the build process.
 - Easily enable debugging + disable optimisation.
 
@@ -81,20 +81,24 @@ Keep in mind that this example is very, very small and only covers an extremely 
 
 ## Task 5 (Bonus)
 
-Setup yourself with a development environment / text editor which supports the following features:
+Setup a development environment / text editor which supports the following features:
 
-- Syntax highlighting for C/C++.
-- Jump to line.
-- Jump to symbol.
-- Jump to file.
-- Jump to definition / declaration.
-- Find all references.
-- Compile with one shortcut.
-- Quickly switch between header / source file.
-- *Semantic auto-completion*, provides (among others) auto-completion based on the type it is invoked on.
-- Debugger integration.
+- syntax highlighting for C/C++
+- support for snippets
+- jump to line
+- jump to symbol
+- jump to file
+- jump to definition / declaration
+- find all references
+- compile with one shortcut
+- quickly switch between header / source file
+- *semantic auto-completion*, provides (among others) auto-completion based on the type it is invoked on
 
-Generally speaking it is not *required* to have such a development environment to develop C++ programs.
+Debugger integration can also be handy, but you instead want to look at GDB user interfaces (ex [voltron]).
+
+[voltron]: https://github.com/snare/voltron
+
+Generally speaking it is not *required* to have such an environment to develop C++ programs.
 Yet it helps inexperienced programs to become productive more quickly.
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

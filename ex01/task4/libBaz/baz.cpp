@@ -4,9 +4,7 @@
 
 #include "bar.h"
 
-void baz()
-{
-	bar();
-	std::cout << "Function baz called" << std::endl;
+void baz() {
+    bar();
+    std::cout << "Function baz called" << std::endl;
 }
-

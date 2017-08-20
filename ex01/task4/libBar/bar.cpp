@@ -2,7 +2,4 @@
 
 #include <iostream>
 
-void bar()
-{
-	std::cout << "Function bar called" << std::endl;
-}
+void bar() { std::cout << "Function bar called" << std::endl; }
