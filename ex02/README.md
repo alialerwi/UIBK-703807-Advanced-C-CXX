@@ -33,6 +33,7 @@ Furthermore, your implementation is only allowed to use:
 
 - C++ standard library (C++14 standard)
 - Boost library
+- C standard library (as fallback)
 - `diff` command
 - `patch` command
 
