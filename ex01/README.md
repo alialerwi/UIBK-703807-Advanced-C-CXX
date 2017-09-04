@@ -16,7 +16,7 @@ Install G++ or Clang and compile the provided file `hello.cc`.
 Be sure to install a version that supports C++14.
 When compiling specify the following flags:
 
-    -Wall -Wextra -std=c++14 -O2
+    -std=c++14 -Wall -Wextra -O2
 
 If you are a Windows user, you may instead want to use the compiler which comes along with Visual Studio.
 Adjust the compile flags accordingly.
