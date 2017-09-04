@@ -1,6 +1,6 @@
 ![Advanced C/C++ Programming](gfx/banner.gif)
 
-| Date       | Topic / Exercise  | Darksouls Boss |
+|    Date    | Topic / Exercise  | Darksouls Boss |
 | ---------- | ----------------- | -------------- |
 | 2017-10-06 | Welcome           |                |
 | 2017-10-20 | [Infrastructure]  |                |
@@ -52,6 +52,11 @@ VGA is the only way to connect your laptop with the projector.
 
 > In ZID we do not trust.
 
+## Note about C++17
+
+Most compilers already implement C++ 17 features, you are free to use them, but remember that they are still considered experimental.
+Use `-std=c++1z` to access these features.
+
 # Contacting me
 
 If you have questions or want to know more about a certain topic I am always glad to help.
@@ -71,13 +76,14 @@ Please keep your email informal and include the course number in the subject.
 # Useful References / Tools
 
 - [Awesome Modern C++](https://github.com/rigtorp/awesome-modern-cpp)
-- [Doxygen](http://www.stack.nl/~dimitri/doxygen)
 - [Boost](http://www.boost.org)
-- [CMake](https://cmake.org)
+- [C++ 17 Standard (Draft)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/n4687.pdf)
 - [Clang Format](http://clang.llvm.org/docs/ClangFormat.html)
 - [Clang Sanitizers](https://clang.llvm.org/docs/UsersManual.html#controlling-code-generation)
 - [Clang Tidy](http://clang.llvm.org/extra/clang-tidy/)
+- [CMake](https://cmake.org)
 - [Curated List of Awesome C/C++ Stuff](https://github.com/fffaraz/awesome-cpp)
+- [Doxygen](http://www.stack.nl/~dimitri/doxygen)
 - [Google Test](https://github.com/google/googletest)
 - [Modern C++ Features](https://github.com/AnthonyCalandra/modern-cpp-features)
 - [Online C++ Demangler](https://demangler.com)
