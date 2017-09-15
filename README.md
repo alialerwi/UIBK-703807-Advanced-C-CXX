@@ -26,12 +26,12 @@ The lab will take place in RR15.
 # Grading
 
 Grading will be done through weekly exercise sheets.
-At the beginning of each lab you are asked to mark which exercises you have solved by yourself *and* prepared for presentation.
+At the beginning of each lab your team is asked to mark which exercises you have solved by yourself *and* prepared for presentation.
 Marking an exercises therefore not only means that you have a solution, but also that you are able to explain it to the class and answer questions related to the exercise and its context.
 To pass this PS you have to:
 
-- mark at least 65% of all exercises (excluding bonus exercises); and
-- receive at least one positive grade for a presentation.
+- mark at least 75% of all exercises (excluding bonus exercises); and
+- receive at least two positive grades for a presentation.
 
 Note that exercises can build on-top of each other -- even across exercise sheets.
 Solutions will *not* be provided.
