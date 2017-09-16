@@ -28,6 +28,10 @@ Welcome to
 
 ![](../gfx/dark_souls_logo.jpg)
 
+- - -
+
+![](../gfx/you_died.jpg)
+
 ## C++ / Dark Souls
 
 is...
@@ -47,7 +51,7 @@ is...
 - learn useful techniques
 - learn how to prevent errors & pitfalls
 - better understand its internals
-- be able to overcome a presented challenge
+- be able to overcome challenges
 
 - - -
 
@@ -63,14 +67,41 @@ C++ is used where the real shit happens:
 - Compiler Research
 - Game Engines
 
+- - -
+
+![](../gfx/unreal_engine.jpg)
+
+- - -
+
+![](../gfx/cryengine.png)
+
+- - -
+
+![Runtime](../gfx/unity_engine.png)
+
+- - -
+
+![LLVM Compiler](../gfx/llvm_dragon.png)
+
+- - -
+
+![](../gfx/victory.jpg)
+
 # This Proseminar
 
 ## Content
 
 - Supporting the lecture via mandatory exercises
-- Discussing paradigms and techniques
+- Discussing paradigms
+- Learning coding techniques to prevent future errors
 
 ## Modus Operandi
+
+- - -
+
+![](../gfx/meme_teamwork.jpg)
+
+- - -
 
 - Weekly exercises sheets
 - Teams consisting of 3 people
@@ -96,9 +127,21 @@ In order to pass, you must at least:
 
 # First Two Exercise Sheets
 
+- - -
+
+![](../gfx/meme_challenge.jpg)
+
 # Any Questions?
+
+- - -
+
+![](../gfx/meme_questions.jpg)
 
 ## Then
 
 - Build your team now; and
 - Come to me so I can note it down.
+
+- - -
+
+![](../gfx/banner.gif)
