@@ -2,19 +2,20 @@
 % Alex Hirsch
 % 6 October 2017
 
+![](../gfx/banner.gif)
+
 ## About Me
 
 Alex Hirsch
 
-- Member of the DPS research group
-- Working on the Insieme Compiler:
+- member of the DPS research group
+- working on the Insieme compiler:
     - Haskell-based Analysis Framework (MSc Thesis)
-    - General C/C++ Tasks
-    - Visualisation / Tools
-    - Build system stuff   (ノ°Д°）ノ︵ ┻━┻
-- Doing stuff on <https://github.com/W4RH4WK>
+    - general C/C++ tasks
+    - visualisation / tools
+    - build system stuff   (ノ°Д°）ノ︵ ┻━┻
+- doing stuff on <https://github.com/W4RH4WK>
 - now, enough with that...
-
 
 # Welcome to C++
 
@@ -45,9 +46,8 @@ is...
 
 - - -
 
-, but over time you will
+, but over time you will...
 
-- *get used to it*
 - learn useful techniques
 - learn how to prevent errors & pitfalls
 - better understand its internals
@@ -55,7 +55,7 @@ is...
 
 - - -
 
-, sounds tough, why'd I do that?
+Sounds tough. Why'd I do that?
 
 - succeeding feels extremely rewarding
 - learned techniques can be applied elsewhere
@@ -63,9 +63,13 @@ is...
 
 C++ is used where the real shit happens:
 
-- High Performance Computing
-- Compiler Research
-- Game Engines
+- high performance computing (HPC)
+- compiler research
+- game engines
+
+- - -
+
+![LLVM Compiler](../gfx/llvm_dragon.png)
 
 - - -
 
@@ -81,19 +85,15 @@ C++ is used where the real shit happens:
 
 - - -
 
-![LLVM Compiler](../gfx/llvm_dragon.png)
-
-- - -
-
 ![](../gfx/victory.jpg)
 
 # This Proseminar
 
 ## Content
 
-- Supporting the lecture via mandatory exercises
-- Discussing paradigms
-- Learning coding techniques to prevent future errors
+- supporting the lecture via mandatory exercises
+- discussing paradigms
+- learning coding techniques to prevent future errors
 
 ## Modus Operandi
 
@@ -103,19 +103,20 @@ C++ is used where the real shit happens:
 
 - - -
 
-- Weekly exercises sheets
-- Teams consisting of 3 people
-- Tick solved exercises at the start of the proseminar\
+- weekly exercise sheets
+- teams consisting of 3 people
+- tick solved exercises at the start of the proseminar\
   (as team)
 - I'll pick a team at random to present a (ticked) exercise
 - I'll ask each member of the team some questions
+- be prepared to answer questions from your fellow students
 
 ## Requirements
 
 In order to pass, you must at least:
 
 - tick 75% of all (excluding bonus) exercises; and
-- receive two positive grades for your presentation.
+- receive two positive grades for a presentation.
 
 # Course Material
 
@@ -123,9 +124,13 @@ In order to pass, you must at least:
 
 - I'll send you a mail with this link:\
   <https://github.com/W4RH4WK/UIBK-703807-Advanced-C-CXX>
-- Read the README
+- you should read the README
 
 # First Two Exercise Sheets
+
+## 1) Infrastructure
+
+## 2) Basic Version Control System
 
 - - -
 
@@ -139,8 +144,7 @@ In order to pass, you must at least:
 
 ## Then
 
-- Build your team now; and
-- Come to me so I can note it down.
+Start building your team now and come to me so I can note the members down.
 
 - - -
 
