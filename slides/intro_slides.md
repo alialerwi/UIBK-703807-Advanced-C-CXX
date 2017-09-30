@@ -103,12 +103,13 @@ C++ is used where the real shit happens:
 
 - - -
 
-- weekly exercise sheets
+- *weekly* exercise sheets
 - teams consisting of 3 people
 - tick solved exercises at the start of the proseminar\
   (as team)
 - I'll pick a team at random to present a (ticked) exercise
 - I'll ask each member of the team some questions
+- each member will receive an individual grade
 - be prepared to answer questions from your fellow students
 
 ## Requirements
@@ -144,7 +145,11 @@ In order to pass, you must at least:
 
 ## Then
 
-Start building your team now and come to me so I can note the members down.
+- build your team now
+- come to me, so I can note down the members
+- read through the course material's README
+- read the first two exercise sheets
+- I'll stay here for questions
 
 - - -
 
