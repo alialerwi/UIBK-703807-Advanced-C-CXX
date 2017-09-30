@@ -52,12 +52,20 @@ VGA is the only way to connect your laptop with the projector.
 
 > In ZID we do not trust.
 
+## Absence
+
+You do not have to inform me about your absence.
+If a team is only partially present, they can still mark exercises.
+But if the team has to present an exercise, the people missing will not receive a grade.
+Please not that I will *not* take absence statistics into account when selecting teams for presentations.
+Therefore, if you do not attend this lab often you may not be able to get the number of grades required to pass.
+
 ## Note about C++17
 
 Most compilers already implement C++ 17 features, you are free to use them, but remember that they are still considered experimental.
 Use `-std=c++1z` to access these features.
 
-# Contacting me
+# Contacting Me
 
 If you have questions or want to know more about a certain topic I am always glad to help.
 You can find me in room 2W05 of the ICT building.
