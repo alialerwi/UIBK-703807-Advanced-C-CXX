@@ -66,6 +66,7 @@ C++ is used where the real shit happens:
 - high performance computing (HPC)
 - compiler research
 - game engines
+- ...
 
 - - -
 
@@ -124,14 +125,14 @@ In order to pass, you must at least:
 ## Available on GitHub
 
 - I'll send you a mail with this link:\
-  <https://github.com/W4RH4WK/UIBK-703807-Advanced-C-CXX>
+  <https://git.io/vd0P8>
 - you should read the README
 
 # First Two Exercise Sheets
 
-## 1) Infrastructure
+## 1. Infrastructure
 
-## 2) Basic Version Control System
+## 2. Basic Version Control System
 
 - - -
 
@@ -145,12 +146,10 @@ In order to pass, you must at least:
 
 ## Then
 
-- build your team now
-- come to me, so I can note down the members
-- read through the course material's README
-- read the first two exercise sheets
-- I'll stay here for questions
-
-- - -
-
-![](../gfx/banner.gif)
+1. build your team now
+2. read through the course material
+    - <https://git.io/vd0P8>
+    - README
+    - first two exercise sheets
+4. come to me, so I can note down the members
+5. I'll stay here for questions
