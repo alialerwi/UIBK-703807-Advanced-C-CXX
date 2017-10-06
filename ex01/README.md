@@ -40,7 +40,7 @@ Notice any oddities, something that looks counter intuitive?
 
 Sometimes looking at the AST of a C++ program helps one to understand what is really going on behind the scenes.
 Clang is a useful tool for this purpose.
-G++ also provides some mechanisms to dump internal representations.
+G++ also provides some mechanisms to dump internal representations, but I find Clang's AST more accessible.
 
 ## Task 3
 
@@ -63,7 +63,7 @@ Furthermore, the library in `libBaz` depends on the library in `libBar`.
 
 Use a build system (ex [GNU Make], [Autotools], [CMake], [Ninja], [Meson], [Shake], ...) to build libraries and application.
 Be sure to model all dependencies correctly in your setup.
-The following criteria should be met:
+The following criteria *should* be met:
 
 [GNU Make]: https://www.gnu.org/software/make/
 [Autotools]: https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html
