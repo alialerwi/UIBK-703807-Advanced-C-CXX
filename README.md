@@ -48,7 +48,7 @@ How exactly you present your solution is up to you.
 Just be prepared to fit your explanation in a 20 minute slot.
 While a computer is provided by the ZID you are advised to bring your own laptop along.
 Please check if your system is compatible with the installed projector before the lab starts.
-VGA is the only way to connect your laptop with the projector.
+VGA and HDMI are available for connecting your laptop with the projector.
 
 > In ZID we do not trust.
 
