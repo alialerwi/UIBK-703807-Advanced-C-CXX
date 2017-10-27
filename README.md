@@ -5,7 +5,7 @@
 | 2017-10-06 | Welcome           |                |
 | 2017-10-20 | [Infrastructure]  |                |
 | 2017-10-27 | [First Challenge] | [Iudex Gundyr] |
-| 2017-11-03 |                   |                |
+| 2017-11-03 | [Back to Basics]  | [Dragon Rider] |
 | 2017-11-10 |                   |                |
 | 2017-11-17 |                   |                |
 | 2017-11-24 |                   |                |
@@ -18,8 +18,10 @@
 
 [Infrastructure]: ex01
 [First Challenge]: ex02
+[Back to Basics]: ex03
 
 [Iudex Gundyr]: https://www.youtube.com/watch?v=J8J7ZB4vJkg
+[Dragon Rider]: https://www.youtube.com/watch?v=dk4qf7rP8k0
 
 The lab will take place in RR15.
 
