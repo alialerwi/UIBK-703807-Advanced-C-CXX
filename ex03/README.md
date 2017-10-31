@@ -2,7 +2,7 @@
 
 *due on 3 November 2017*
 
-# Task 1
+## Task 1
 
 This task focuses on the correct implementation of RAII as well as copy and move semantics.
 You are asked to implement the concept of `unique_ptr` and `shared_ptr`.
@@ -26,7 +26,7 @@ struct Vec3 {
     - pay attention to corner-cases like self-assignment (`v = v`)
 - check your implementation for memory leaks using `valgrind`
 
-# Task 2
+## Task 2
 
 Let us now investigate the problem of *invalidated* references.
 For this task you are okay to ignore compiler warnings.
@@ -38,7 +38,7 @@ For this task you are okay to ignore compiler warnings.
 - examine the generated assembly code for both functions and compare differences between compilers
 - read up on the topic of *calling conventions* and explain your findings
 
-# Task 3
+## Task 3
 
 Examine the program `iterations.cc` and think about the expected output.
 Compile the program and run it.
@@ -55,14 +55,14 @@ The actual behaviour of this executable depends on a lot of system-related facto
 
 **Note 2:** If you are not that familiar with using a debugger, consider doing task 5 before this one.
 
-# Task 4
+## Task 4
 
 You are given the program `strange.cc`.
 Compile it with different compilers and optimisation flags.
 What do you notice?
 What is really happening here?
 
-# Task 5 (Bonus)
+## Task 5 (Bonus)
 
 Make yourself comfortable with GDB. Take `bubble_sort.c` and compile it:
 
