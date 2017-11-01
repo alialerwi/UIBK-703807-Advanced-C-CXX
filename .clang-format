@@ -1,6 +1,8 @@
 ---
 Language:             Cpp
 BasedOnStyle:         Google
-AccessModifierOffset: -2
 IndentWidth:          4
+AccessModifierOffset: -2
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
 ...
