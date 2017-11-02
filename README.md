@@ -82,6 +82,7 @@ Please keep your email informal and include the course number in the subject.
 # Essential References
 
 - [C++ 14 Standard (Draft)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4296.pdf)
+- [C++ Core Guidelines](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)
 - [Google C++ Style Guide](https://google.github.io/styleguide/cppguide.html)
 - [cppreference.com](http://en.cppreference.com)
 
