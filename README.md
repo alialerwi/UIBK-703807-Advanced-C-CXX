@@ -7,7 +7,7 @@
 | 2017-10-27 | [First Challenge]  | [Iudex Gundyr] |
 | 2017-11-03 | [Back to Basics]   | [Dragon Rider] |
 | 2017-11-10 | [Brave New Worlds] | [The Pursuer]  |
-| 2017-11-17 |                    |                |
+| 2017-11-17 | [Taking Inventory] |                |
 | 2017-11-24 |                    |                |
 | 2017-12-01 |                    |                |
 | 2017-12-15 |                    |                |
@@ -20,6 +20,7 @@
 [First Challenge]: ex02
 [Back to Basics]: ex03
 [Brave New Worlds]: ex04
+[Taking Inventory]: ex05
 
 [Iudex Gundyr]: https://www.youtube.com/watch?v=J8J7ZB4vJkg
 [Dragon Rider]: https://www.youtube.com/watch?v=dk4qf7rP8k0
