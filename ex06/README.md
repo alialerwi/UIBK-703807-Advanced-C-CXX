@@ -5,7 +5,7 @@
 ## Task 1
 
 Make yourself familiar with [SDL2_ttf] and think about a good data-structure for implementing menus.
-You are encouraged (but not required) to write a specific for this feature, like done previously.
+You are encouraged (but not required) to write a specification for this feature, like done previously.
 This data-structure should allow for easy navigation, modification, and displaying of menus.
 
 [SDL2_ttf]: https://www.libsdl.org/projects/SDL_ttf/
