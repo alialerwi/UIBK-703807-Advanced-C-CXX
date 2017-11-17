@@ -1,0 +1,80 @@
+Content:
+    1.).....Player
+    2.).....Map
+    3.).....Camera
+    4.).....Framerate
+
+===============================================================================
+
+1.) The Player
+===============
+
+The first change from the codebase we made was to spawn the player
+as a unique pointer instead as original a shared pointer, because
+there can only be one player, who is unique.
+
+===============================================================================
+
+2.) The Map
+===============
+
+The second change and the first big change we made was changing from drawing
+a colored background to loading a map.
+
+
+2.1) Creating
+===============
+
+The map consists of a Tile class which is an Interface class.
+In the Game class this map exists as a 2D C-Style array. The information which
+type of tiles (floor, wall) shall be rendered is saved in a mapfile and is an
+integer. With the initialization of the game we read the file once.
+
+2.2) Map-File
+===============
+
+A mapfile looks like this
+
+01 01 01 01 01 01
+01 00 00 00 00 01
+01 00 00 00 00 01
+01 00 00 00 00 01
+01 01 01 01 01 01
+
+We defined 0 and 1 in "constants.h" where 0 is floor and 1 are walls.
+In our 2D Tile array we save each tile at the right position, so
+tile[0][0] has the position (0, 0) in our game.
+This file can be edited at will, however choose the size accordingly,
+such that "Tiles per line (col) x 32 = LEVEL_WIDTH (LEVEL_HEIGHT)".
+
+
+2.3) Rendering
+===============
+
+We render the tiles as either wall or floor. The information which sprite shall
+be used is derived at render time, because otherwise the last read sprite is
+used. Also we render the map first since it's the bottom layer.
+
+===============================================================================
+
+3) The Camera
+===============
+
+The camera itself is a part of the Game class. It consists only of an
+"SDL_Rect" with the width (height) if the screen, which is set in
+"constants.h". The focus of the camera is the player itself.
+However if the player is at a side of the map the camera will only
+follow it until the edge of the camera is the edge of the map. This
+prevents rendering outsides from the map.
+
+===============================================================================
+
+4.) Framerate
+===============
+
+At the beginning, the game was rendered depending on VSynch. We implemented
+a timer class which can track the ticks and the FPS are interchangeable in
+"constants.h". We make a simple check if the current loop is finished too
+early. If it is, then we simply delay the continuity of the loop for the
+remaining ticks.
+This should enable the game to run the same in 30 or 60 FPS.

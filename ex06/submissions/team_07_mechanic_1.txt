@@ -1,0 +1,72 @@
+The current state is as follows:
+
+There exist beetles which randomly move in any direction left, right, up
+or down. Additionally we have monsters, here spiders, which actually
+track the player. They also have full collision with walls, other enemies
+and the player.
+
+
+For task 3 we implemented monsters as described below:
+
+There should exist monsters which follow the player in each input event.
+When the player hits a monster, or he hits a beetle, a "GAME OVER" screen
+should appear and the user has the possibility to restart the game
+using the key R.
+
+
+===============================================================================
+
+In order to implement this mechanism, do the following steps:
+
+1-)
+=====
+Add another entity "Monster" which follows the player. The following should
+happen in such a way that the player has the possibility to "escape" monsters
+because the monsters are in some kind stupid. Extend your class from
+Entity and overwrite the function "update()".
+Inside this function you need to find out the current hero's position.
+For that, add another function to request this data. The monster should then
+choose its direction to move depending on the current hero's position.
+In 80% of each user event, the monsters should naively follow the hero,
+in the other 20% the monster should move in a random direction in order to
+give the player a chance of escaping. Monsters are not allowed to move
+diagonally!
+You do not need to implement a sophisticated pathfinding algorithm.
+
+1.1-)
+=====
+Graphical specification: Choose a sprite from the web and add different
+directions for the monster to look at. E.g. if the monster moves to the left,
+choose a sprite which looks to the left.
+
+2-)
+=====
+Add the collision detection, located in Entity::move(). Monsters should not
+be allowed to walk on a wall either. Also change the collision detection in
+order to differentiate each kind of collision. E.g. collision with wall,
+collision with enemy, or no collision. Return a value which afterwards
+can be used to determine if there was a collision with any enemy and
+therefore a GAME OVER should be raised.
+
+3-)
+=====
+Add additional logic to the game, using the return value from step 2-).
+If there was no collision, continue listening for user events and render
+frames. If a collision with a wall is detected, do nothing and continue
+listening for user events too. If a collision with an enemy is detected,
+return a boolean to the main game loop. Inside the loop, make sure that
+no further user events are accepted (except those described in step 4-).
+Make sure, that the rendered view displays a text telling "GAME OVER".
+
+
+4-)
+=====
+User events in GAME OVER mode:
+If a GAME OVER is reached, only those 2 user events should be accepted:
+    - Q quit the game
+    - R restart the game:
+        Delete all previously added monsters, beetles and events.
+        For that, add an additional function restartGame()
+        inside the Game-Class. The game should immediately start at
+        the same point as usual.
+===============================================================================

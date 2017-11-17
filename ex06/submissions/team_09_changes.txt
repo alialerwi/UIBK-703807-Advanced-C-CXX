@@ -1,0 +1,13 @@
+### Changes made based on the provided application ###
+
++ We extended the vector class in order to support a bit more operations, which
+  could be useful for later steps in development.
+
++ We added the SL2_ttf library for rendering text and Boost for loading and
+  parsing the dungeon-map-files.
+
++ In the resources folder we added the subdirectories map and fonts for saving
+  levels and font styles. Font styles are also used for text-rendering.
+
+In general we didn't really change the initial code base very much. All the
+other changes were done during development of the other tasks.

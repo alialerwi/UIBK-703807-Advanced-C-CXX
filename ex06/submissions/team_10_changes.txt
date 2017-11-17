@@ -1,0 +1,14 @@
+The following changes where made to the codebase:
+
+- replaced log macros with sdl logging
+- removed game reference from entity (game is only passed as parameter to the
+  update function)
+- made resource loader singleton to remove the game dependency from entities
+  (see change above)
+- refactored everything except moving from entity into new class renderable
+- renamed entity to movable
+- moved sprite coordinates from spriteset to renderable (allowing to change
+  the sprite position for single renderables if multiple renderables share
+  the same spriteset)
+- added + and == operator for Vec2
+- added the player as member to the game class

@@ -1,0 +1,40 @@
+# Task 1 - Changes
+
+### Constants
+
+#### Current State
+- Constants are defined in various files (usually where there are used).
+
+#### Problems
+- Constants may be used in other files which results in moving them alot.
+
+#### Wanted Change
+- Create a file which contains all constants and can be included.
+
+
+### Entity Hierarchy
+
+#### Current State
+- Base class Entity has attributes game, position and sprite set.
+- Base class Entity has methods for moving and updating the entity.
+- Player is subclass of entity and overrides update method.
+
+#### Problems
+- Not all entities need a move method (e.g. walls).
+- Most entities need a rectangle for collision check (e.g. walls, player).
+
+#### Wanted Change
+- Specify a base class which has only position and sprite set (e.g. floor).
+- Create Hierarchy starting with said base class.
+
+#### Hierarchy
+
+| Class        | pos | sprite_set | collides() | move() | Example |
+|:-------------|:---:|:----------:|:----------:|:------:|:--------|
+| Entity       |  x  |     x      |            |        | Floor   |
+| Colliding    |  x  |     x      |     x      |        | Wall    |
+| Moving       |  x  |     x      |     x      |   x    | Enemy   |
+| Controllable |  x  |     x      |     x      |   x    | Player  |
+
+*Note: this hierarchy may later be extended (e.g. for characters/enemies).*
+

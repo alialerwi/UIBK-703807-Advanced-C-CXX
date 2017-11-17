@@ -1,0 +1,21 @@
+Task 04:
+
+Our next chosen game mechanic: healthbar, use of items (bomb, arrow)
+
+The item (bomb or arrow) must be active in the inventory (indicated by the icon
+in the upper left corner) before it can be activated with the "f" key.
+An item should be created on the position of the player and act
+as expected:
+In the case of an arrow, it should fly in the right direction (where the player
+is looking at), apply damage on hit and disappear after colliding.
+In the case of a bomb, the item should explode after a few seconds and apply
+damage to the surrounding entities.
+
+In order to let the items disappear after a certain amount of time, you need to
+take a timestamp when the item is used and check if it has passed your given
+time. If that is the case you need to take the item out of the render pipeline
+and delete it.
+
+The health is visible in form of hearts and is implemented as a hud element in
+the upper left corner. It should also update automatically if the hp of the
+player changes (f.e.: if he takes dmg).

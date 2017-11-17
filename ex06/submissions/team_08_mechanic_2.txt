@@ -1,0 +1,57 @@
+# Inventory System
+
+## Overview
+
+This is assuming collision detection is already implemented.
+
+Each player can gather other entities. For simplicity this specification
+assumes that a player's inventory can hold eiter one or no entity. If a
+player's inventory already contains an entity if a new one is added, the old
+entity simply gets deleted from the repository.
+
+Assuming each entity has a name, a players inventory can be displayed by
+displaying the name of the entity in the inventory.
+
+There are entities that can be picked up and ones that cannot be picked up.
+
+An entity that can be picked up is picked up by colliding into it.
+
+If an entity gets picked up by a player, it gets removed from the game field.
+
+If an entity gets removed from a player's inventory, it gets placed back to
+the game field at the current position of the player.
+
+An entity gets removed dfrom the player's inventory by pressing a certain key.
+
+## API
+
+Each entity must provide an interface to perform the following actions:
+
+- Getting an entites name
+- Removing the entity from the game field (when picking it up)
+- Setting the position of the entity when placing it back on the game field.
+
+Each player must provide an interfact to perform the following actions:
+
+- Adding an entity to the player's inventory
+- Getting the name of the entity in the player's inventory
+- Removing an entity from the player's inventory
+
+The game must be able to display the name of the entity in the players
+inventory on the press of a certain key. 
+
+## Implementation
+
+The following is an outline on how to implement such conditions:
+
+- Add a `canBePickedUp` flag to each entity.
+- Add a `name` member to each entity that can be picked up.
+- Add an optional `inventory` member to the `Player` class.
+- On collision with an entity that can be picked up, remove the entity from
+  the game's entities and set the player's inventory to be this entity.
+- When pressing the key to show the players inventory, render the name of
+  the inventory's entity.
+- When pressing the key to remove the inventory entity, set the position
+  of the entity to equal the player's position and place it back in the
+  game's entities list before the player (so that it gets rendered below it).
+  

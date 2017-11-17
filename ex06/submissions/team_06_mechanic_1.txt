@@ -1,0 +1,33 @@
+# Task 3 - Mechanic 1
+
+### Basic Monsters with AI
+- Various monster types which act differently.
+- Movement based on monster's goals (e.g. fight, survive, ...).
+- Monsters move each time the player moves.
+
+#### Implementation
+- Monsters are a subclass of MovingEntity.
+- Method MovingEntity::move() does out of bounds/collision checks.
+- All subclasses of MovingEntity should use MovingEntity::move().
+- Implement different movement algorithms corresponding to goal in subclasses.
+- Make actual monsters subclasses of subclasses based on monster's goal.
+
+##### Randomly Moving Monster (RMM)
+- Moves in x or y direction based on coinflip.
+- Moves along the chosen axis based on coinflip.
+- May just stay in place.
+
+##### Fixed Moving Pattern Monster (FMPM)
+- Moves along a fixed path.
+
+##### Chasing Monster
+- Subclass of RMM or FMPM.
+- When player gets close, starts to chase player.
+- Gets exhausted (stays) after set amount of turns.
+- Start chasing again if player gets close.
+
+##### Frightened Monster
+- Subclass of RMM or FMPM.
+- When player gets close, starts to flee from player.
+- Has to be cornered to kill.
+

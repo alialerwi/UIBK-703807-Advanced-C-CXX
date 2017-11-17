@@ -1,0 +1,44 @@
+### Game Mechanic: Enemies
+
+Enemies are entities roaming the map and damaging the player on contact.
+
+## Definition of Enemies
+
+We define a class to hold information about an ememy, derived from Movable.
+
+    |--------------------------------------|
+    |Enemy                                 |
+    |--------------------------------------|
+    | -updateGap : int                     |
+    | -strengh : int                       |
+    | -lastUpdate : time_point             |
+    | -walk(game : Game, direction : Vec2) |
+    | -dealDamage(game : Game)             |
+    | +update(game : Game)                 |
+    |--------------------------------------|
+
+updateGap defines how big the gap (in milliseconds) should be between moves 
+of the enemy. strength defines how much damage touching the enemy deals. This
+is expressed as the number of HPs the player loses upon contact.
+
+lastUpdate saves when the last move was performed and is used to correctly 
+time actions.
+
+The walk method implements movement of the enemy. It is responsible to check 
+for collisions with obstacles etc.
+
+The dealDamage method checks for contact with the player and deals damage 
+accordingly.
+
+The update method from the base class Moveable has to be overridden. It is
+responsible for correctly calling walk and dealDamage and to correctly time
+those actions according to updateGap.
+
+## Behavior of Enemies
+
+For the current version of the game, enemies perform random movements, making
+sure not to bump into obstacles. This is subject to change and could be
+replaced by more sophisticated movement paths in a future version.
+
+Also, for the current version, enemies disappear upon touching the player and
+respawn at a random location. This is also subject to change.

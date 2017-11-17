@@ -1,0 +1,33 @@
+# Task 4 - Mechanic 2
+
+### Basic Combat
+- Player can fight monsters.
+- While player is in combat, other npcs don't move.
+
+#### Melee
+- When player moves next to monster, they start fighting.
+- Fast attack: Weaker, but monster will only attack once during.
+- Heavy attack: Stronger, but monster may attack twice during.
+- Player and monster can attempt to flee.
+- Fleeing has a small chance and gives the opponent a free turn if failed.
+
+#### Range (if there is time)
+- Projectiles fly at a certain speed and a certain distance.
+- Projectiles only move if the player moves.
+- Player and monsters may avoid projectiles.
+
+#### Implementation
+- Player and monsters have set amount of health.
+- Player starts with set melee and range weapon (no new weapons).
+- Player and monster attacks do set amount of damage.
+- If player.collides(monster) initiate battle (show battle UI).
+- Projectiles are a subclass of MovingEntity.
+
+##### Battle UI
+- Shows player controls (fast/heavy attack, flee).
+- Shows hitpoints of player and monster.
+- Shows who's attacking.
+- Shows message if battle is over (flee, win, lose).
+- Basic implementation may be text based.
+- Shows message if ranged attacks hit.
+

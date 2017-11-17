@@ -1,0 +1,63 @@
+Based on the first mechanic - the monsters that track down the player -
+we build mechanic 2: a basic combat system. The combat system shall allow
+the player to shoot magical orbs. This is a ranged attack with unlimited
+range, an unlimited supply of ammunition and no cooldown. It deducts one HP of
+an enemy it hits. It is destroyed on first impact, regardless of which entity
+it bumped into. Enemies are immediately destroyed when they run out of HP.
+Enemies, i.e. monsters and beetles, are still considered deadly if the player
+happens to bump into them.
+
+The monsters from mechanic 1 (and beetles for that matter) were programmed to
+move in synchronization with the player. In other words, the monsters only
+moved a tile when the player did. For our basic combat to work (and be
+somewhat engaging) we need to make the player and enemy movement asynchronous.
+Enemies shall move at a fixed interval independend of the player's movement.
+The magical orbs should move exactly as fast as the player itself can travel.
+
+
+===============================================================================
+
+In order to implement this mechanism, do the following steps:
+
+1-)
+=====
+Change when entities different from the player and projectiles are updated.
+For that add a routine that executes every N number of frames. Additionally,
+the collision detection has to be adapted as the enemies can now move into
+the player on their own. This obviously should also lead to a lost game. Adapt
+the collision detection function to correspond to these new requirements.
+
+2-)
+=====
+Monsters and beetles should not die on the first hit. Add a property to these
+classes that models the lifepoints of these vile creatures. We also require a
+function that is triggered when the creature gets hit. This function deducts a
+lifepoint and triggers the destruction of the creature if its health is at
+zero. Change the Monster and Beetle classes accordingly.
+
+3-)
+=====
+To give the player the ability to shoot his new fancy magical orbs, we have to
+provide him with additional controls. Thus, map the player movement to WASD and
+trigger the magical orbs when one of the arrow keys is pressed down. Separating
+the controls for movement and shooting will allow us to make these actions
+potentially simultaneous later on. For now, stick with accepting one action
+(movement or attack) at a time.
+
+
+4-)
+=====
+Add another entity "Projectile" which will act as a magical orb. Extend your
+class from Entity and add a property that stores the direction the projectile
+was shot in. Overwrite the function "update()". Remember to always move the
+projectile in the direction it was shot in. Pay special attention that the
+projectile is immediately destroyed when it collides with *anything* and that
+it moves at the same speed as the player (and not at the speed of the other
+entities!).
+
+4.1-)
+=====
+Graphical specification: Choose a sprite from the web that looks like a colored
+sphere. The sprite itself will be rectangular, so make sure that the background
+of the sprite is transparent.
+===============================================================================

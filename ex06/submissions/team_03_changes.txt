@@ -1,0 +1,16 @@
+Changes:
+
+We changed in the given implementation that the render function is given in
+every object to receive cleaner code. So the entity class and the hud_element
+class inherit the new Renderable class. Then in the game class for each element
+the render function is called.
+Since the WASD controls for moving are more used in computer games we changed
+that.
+
+Controls:
+WASD: Moving
+Q: Switch currently equipped item
+F: Use item
+R: Cheat button (generates 10 arrows and 10 bombs -> gets replaced through
+   microtransactions next patch)
+Space: Interacting (does nothing at the moment)

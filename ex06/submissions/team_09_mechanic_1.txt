@@ -1,0 +1,49 @@
+### Game mechanic 1: Dialogue Box ###
+
+The dialogue box consists of two parts:
+First the background is generated and
+second the actual text.
+
+
+*** Background ***
+
+Option 1:
+is a large sprite, which has the same width as the actual game window and a
+certain height. It is located static at the bottom of the Screen and displayed
+whenever a dialogue takes place.
+
+Option 2:
+The background is a basic shape like a filled rectangle.
+It is rendered whenever and wherever it is needed with the Text.
+This option requires a dynamic coupled moving of both Background and Text.
+
+Text:
+The mechanics for the Text are coupled in a specific Class, which provides
+basic text editing functions like changing the text size Font and color and the
+text itself.
+
+
+*** Rendering ***
+
+In order to assure a correct rendering the background has to be rendered before
+the Text.
+Since the current rendering requires Textures, an additional conversion for the
+basic shape and the text is also needed. (e.g. in the resource loader)
+
+Option 1 Background sprite + Text
+
+This approach renders the Background once and hides it whenever it is not
+needed. When the dialogue is active, every undesired interaction will hide the
+box and exit the dialogue. During the dialogue no update of any other object
+takes place only the updates according to the dialogue or text themselves.
+(turned off by a flag)
+
+The text is converted and rendered, when it appears or changes. Rendering any
+new text destroys the old texture.
+
+Option 2 Background shape + Text
+
+The text and Background is converted and rendered, when it appears, moves or
+changes.
+Rendering any new text destroys the old texture. Moving the text requires the
+same for the background.

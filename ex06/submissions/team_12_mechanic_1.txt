@@ -1,0 +1,83 @@
+ _______  _______  _______           _______
+(  ____ )(  ___  )(  ____ \|\     /|(  ____ \
+| (    )|| (   ) || (    \/| )   ( || (    \/
+| (____)|| |   | || |      | |   | || (__
+|     __)| |   | || | ____ | |   | ||  __)
+| (\ (   | |   | || | \_  )| |   | || (
+| ) \ \__| (___) || (___) || (___) || (____/\
+|/   \__/(_______)(_______)(_______)(_______/
+ _       _________ _        _______
+( \      \__   __/| \    /\(  ____ \
+| (         ) (   |  \  / /| (    \/
+| |         | |   |  (_/ / | (__
+| |         | |   |   _ (  |  __)
+| |         | |   |  ( \ \ | (       =========================
+| (____/\___) (___|  /  \ \| (____/\ not a star wars story ...
+(_______/\_______/|_/    \/(_______/ =========================
+preliminary working title
+
+======================================
+Turn-based Gameplay with Random Events
+======================================
+
+--[ Table of contents
+
+ 1 - Introduction
+ 2 - Gameplay
+ 3 - Implementation
+ 4 - Currently Implemented Features
+     4.1 - Spawning of Bats
+     4.2 - Basic AI for Bats
+ 5 - Ideas for the Future
+
+--[ 1 - Introduction
+
+As the widely accepted "Berlin interpretation" for roguelikes dictates that
+game mechanics should operate in a turn-based fashion, we decided to follow
+suit for our game.
+
+The game should keep track of a value known as "game time" which encodes the
+passing of time within the game and thus the advancement of "turns".
+
+On every turn, the game environment can react to the changes to the world state
+imposed by the player. For instance, a monster might spawn nearby, or an
+existing monster might choose to chase the player or cast a spell.
+
+--[ 2 - Gameplay
+
+The various actions taken by the player within the game take certain amounts of
+time to complete. For instance, moving one tile into any direction advances
+game time by 1, i.e. it takes one turn to do.
+
+Likewise, interacting with the game world such as using an item or attacking an
+enemy (as detailed in team_12_mechanic_2.txt), advances the game time.
+
+--[ 3 - Implementation
+
+The Game class should provide a method Game::AdvanceTime(n) to advance the game
+time by "n" turns. For each of these turn, the internal game state should be
+updated by
+
+ (a) making global modifications to the game state, such as spawning enemies
+ (b) giving each entity the opportunity to react to game state changes by
+     calling the Entity::Update method.
+
+--[ 4 - Currently Implemented Features
+
+We currently advance game time when moving the player, opening doors and
+attacking enemies.
+
+Enemies can spawn randomly nearby the player on every turn.
+
+A very simple AI was implemented that makes the bats follow players around and
+attack them.
+
+--[ 5 - Ideas for the Future
+
+This system has practically endless potential. For a more RPG-like feel,
+additional player stats such as hunger and fatigue could be modified on every
+turn.
+
+Different enemies could be spawned and their stats (like HP, AP...) could be
+randomized to increase gameplay diversity.
+

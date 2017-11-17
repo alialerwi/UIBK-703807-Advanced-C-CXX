@@ -1,0 +1,65 @@
+##############
+### COMBAT ###
+##############
+
+The combat mechanic needs to fulfill the following requirements:
+
+    - the player has a melee attack mapped to one key and a ranged attack
+      mapped to another key
+
+    - melee attacks only affect the block in front of the player
+      (so it depends on the direction the player is facing)
+
+        Example:
+
+            ########
+            #......#
+            #...P..#
+            #...x..#
+            #......#
+            ########
+
+            Player P faces down and x marks the block affected
+            by his melee attack
+
+    - ranged attacks fire a projectile in the direction the player is facing
+
+    - the projectile will move straight for exactly 3 blocks, then disappear
+
+        Example:
+
+            ########
+            #......#
+            #.xxxP.#
+            #......#
+            #......#
+            ########
+
+            Player P faces left and the x's mark the 3 blocks affected
+            by P's ranged attack.
+
+            First there will be damage output at the rightmost x, then,
+            after a fixed interval, the projectile moves ahead to the
+            middle x and outputs damage and finally to the leftmost x,
+            before it disappears.
+
+    - there can only be one projectile on screen at a time, i.e. the player
+      cannot fire another projectile before the previous one has travelled
+      3 blocks or hit something
+
+    - projectiles cannot go through walls and disappear if they hit a wall
+
+    - if a projectile hits another projectile, both disappear
+
+    - there is a delay in projectile movement from block to block to make it
+      slow enough to react to (dodge)
+
+    - projectiles also disappear if they hit a monster
+     (in that case the monster takes damage)
+
+    - melee attacks deal 2 damage points while projectiles deal only 1
+
+    - if the player is hit by a monster projectile or runs into a monster
+      (i.e. collision check with monster is positive) the player dies
+      and it's game over
+      

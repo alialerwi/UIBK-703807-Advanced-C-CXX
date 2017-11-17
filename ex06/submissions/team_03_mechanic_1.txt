@@ -1,0 +1,14 @@
+Task 03:
+
+Our chosen game mechanic: inventory system
+
+With the inventory system a player can store and take multiple items (for
+example bombs or arrows) with him. Items should be separated classes which
+are stored in a vector or a list (which represents the inventory). That list is
+attached to the player object.
+
+For convenience we decided that the player can keep as many items as he wants,
+instead of limiting the inventory by size or by weight.
+We also decided to show only the current equipped item from the inventory,
+instead of visualizing an inventory menu. The player can simply switch between
+items of his inventory through a button press.

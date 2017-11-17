@@ -1,0 +1,26 @@
+--[ 1 - Mechanic Item interaction
+
+----[ 1.1 - Description
+
+If the player walks to or over an item he can interact
+with the item by pressing space. It depends on the item,
+if the user can walk over the item or could only stand
+before the item.
+Also the interaction behaviour of the item depends on the item type.
+For example a door opens if the player interact with it
+or bugs are "fixed" if the player interacts with the computer.
+
+----[ 1.2 - Implementation
+
+To implement this game mechanic, the entity class could
+provide two methods:
+
+- "isInteractable" returns true, if the player could
+interact with this entity (for example the player stands before a door)
+- "interact" gets called, when the user wants to interact with this
+entity.
+
+The game class is responsible to check for all items in the world if they are
+interactable (so call isInteractable on all items). If an item
+is interactable the game class calls interact on this item.
+Those calls should be executed, after a player finished his move.

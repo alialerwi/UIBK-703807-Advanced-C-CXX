@@ -1,0 +1,30 @@
+--[ 1 - Mechanic Enemies
+
+----[ 1.1 - Description
+
+This mechanic is about enemies. For example the enemies of
+the player are bugs. Bugs are in the world walking randomly around,
+hurting the player if they catch him. Enemies can also be
+destroyed by the player in different ways. So for example
+bugs can be destroyed by fixing them using a computer.
+
+----[ 1.2 - Implementation
+
+To implement this mechanic, an entity could be hurt.
+So the function hurt is added to entity. It depends on the enemy,
+how fast he dies (therefore the implementation is done in the
+enemy class). The game class is responsible to spawn all enemies
+in different rooms and keeps a list of all different types
+(bugs, product owners etc.). So for example the computer can call
+hurt on a bug using the bug list of the game, if the player interacts with the
+computer. Two different functions are called by the game engine after a
+player finished his round:
+
+- "canAttack" returns true if the enemy is able to attack the player
+- "attack" executes the attack on the player
+
+Both functions could also be in one single function, but we decided to do it in
+the player class with two functions because in this way we could for example
+do attacks randomly if the player got a special item etc. This is for the
+future and not for the current implementation. So with additional features
+the current implementation must not be changed.

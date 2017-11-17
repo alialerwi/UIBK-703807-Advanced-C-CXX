@@ -1,0 +1,31 @@
+##### Basic Combat #####
+- ranged & melee weapon
+
+- every weapon has potential damage: [1-1000]
+
+
+- melee weapon hits AI standing on following places:
+. . . . .
+. . . o .
+. . > o .
+. . . o .
+. . . . .
+
+
+- ranged weapon hits AI standing on following places(depends on range(10 to inf)):
+. . . . . . . . . .
+. > o o o o o o o o
+. . . . . . . . . .
+
+
+- may also spreading weapons(pumpgun):
+. . . . . . . . . o o o o o
+. . . . . o o o o o o o o o
+. > o o o o o o o o o o o o
+. . . . . o o o o o o o o o
+. . . . . . . . . o o o o o
+
+
+Basic combat code animates the projectile & the hitten entitiy gets HP
+removed, entitys with no HP get removed from list(dead).
+Player lose 1000 HP if it collides with a AI enemy

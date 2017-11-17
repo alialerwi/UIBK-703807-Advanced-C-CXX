@@ -1,0 +1,11 @@
+--[ 1 - List of changes
+
+- Added clion project and removed *.sln
+- Renaming from roguelike to nerdshow (we implement a game where a developer
+ must survive in a world full of bugs, bad product owners etc.)
+- Moved header files to cc files -> clion default... so its easier to use the ide
+- Renaming of cc files to cpp
+- Updated images to nerd images (from freevector and flaticon)
+- Changed SDL_RenderCopy to SDL_RenderCopyEx because of rotation
+- We extended the function update, such that we can implement different behaviour when the
+player finished his move (for example the player walked over a bug, so the bug attacks the player).

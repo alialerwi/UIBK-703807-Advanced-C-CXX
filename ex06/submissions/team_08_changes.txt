@@ -1,0 +1,49 @@
+# Changes to the Code Base
+
+This is the text file regarding exercise 3, task 1 of the proseminar Advanced
+C/C++ Programming at University of Innsbruck in the WS 2017/18.
+
+## Class Diagram
+
+The following is a simplified class diagram to help understand the structure
+of the provided code.
+
+                              +----------+
+                              |          | loops
+                              |   main   +-------> Clear Events,
+                              |          |         Poll Events,
+                              |          |         Add Events,
+                              +----+-----+         Update Entities,
+                                   |               Render Game
+                                   | owns
+                                   |
++-------------------+         +----v-----+
+|                   |   owns  |          |       spawns
+|  Resource Loader  <---------+   Game   +--------------------+
+|                   |         |          | has    +--------+  |
++-------------+-----+         +----+-----+------->| Events |  |
+              |                    |           /  +--------+  |
+              | loads              | owns    /  affect        |
+              |                    |       v                  |
+       +------v-----+        +-----v------+                   |
+       |            |   owns |            |  can              |
+       | Sprite Set <--------+ Entitie(s) +-------> move and  |
+       |            |        |            |         update    |
+       +------------+        +----+-------+                   |
+                                  |                           |
+                                  | is a                      |
+                                  |                           |
+                              +---+------+                    |
+                              |          |                    |
+                              |  Player  <--------------------+
+                              |          |
+                              +----------+
+
+## Actual Code Changes
+
+The following changes were made to the provided code:
+
+- Updated the player sprite when moving the player to make the player
+  face in the right direction. To do this a `PlayerSprit` enum was introduced
+  which holds the coordinates of the respective sprites in the player sprite
+  set. See `player.cc`.

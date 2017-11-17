@@ -1,0 +1,157 @@
+ _______  _______  _______           _______
+(  ____ )(  ___  )(  ____ \|\     /|(  ____ \
+| (    )|| (   ) || (    \/| )   ( || (    \/
+| (____)|| |   | || |      | |   | || (__
+|     __)| |   | || | ____ | |   | ||  __)
+| (\ (   | |   | || | \_  )| |   | || (
+| ) \ \__| (___) || (___) || (___) || (____/\
+|/   \__/(_______)(_______)(_______)(_______/
+ _       _________ _        _______
+( \      \__   __/| \    /\(  ____ \
+| (         ) (   |  \  / /| (    \/
+| |         | |   |  (_/ / | (__
+| |         | |   |   _ (  |  __)
+| |         | |   |  ( \ \ | (       =========================
+| (____/\___) (___|  /  \ \| (____/\ not a star wars story ...
+(_______/\_______/|_/    \/(_______/ =========================
+preliminary working title
+
+=================================
+Interaction with the World - v0.1
+=================================
+
+--[ Table of contents
+
+ 1 - Introduction
+ 2 - Gameplay
+     2.1 - Every Interaction Ever
+     2.1.1 - Keybindings
+     2.2 - Diversive Reaction Behaviour
+ 3 - Currently Implemented Features
+     3.1 - Objects
+     3.2 - NPCs
+ 4 - Implementation
+     4.1 - Interactable Objects as Entities
+ 5 - Ideas for the Future
+
+--[ 1 - Introduction
+
+Any kind of game would probably be incredibly boring if there was no way to
+interact with the world they offer. This makes interactions a key feature for
+every game. Also without interactions many other key features are not going
+to be properly implementable. (like looting, talking to NPCs and many more)
+
+Interactions are also likely to change the state of certain objects. You won't
+be able to get through a closed door until you've opened it.
+
+--[ 2 - Gameplay
+
+Interactions make a world come to life! In this section the procedure of
+interaction will be described from a gameplay perspective.
+
+----[ 2.1 - Every Interaction Ever
+
+Even though interactions may result in many different outcomes, they all have
+something in common. Every interaction from player to object is triggered by
+pressing "o". The character will then enter "interaction mode" in which you
+will be asked to specify the exact tile on which the interactable object is
+located. You will have to stand exactly one tile away from the object you want
+to interact with.
+
+In "interaction mode" you can choose the tile with the arrow keys or the
+respective "h, j, k, l" keys. Note that you will not be able to move while in
+"interaction mode". You can also leave "interaction mode" by pressing "escape"
+or choosing a tile which does not have an interactable object on it.
+
+------[ 2.1.1 - Keybindings
+
+      key      |             interaction
+---------------+-----------------------------------------
+o              | enter "interaction mode"
+arrow left, h  | in "interaction mode" choose left tile
+arrow right, l | in "interaction mode" choose right tile
+arrow down, j  | in "interaction mode" choose bottom tile
+arrow up , k   | in "interaction mode" choose top tile
+esc            | in "interaction mode" cancel
+
+----[ 2.2 - Diversive Reaction Behaviour
+
+Reactions to requested interactions may differ depending on the object. Doors
+might open (or not), NPCs might want to talk to you or buttons are pressed...
+
+Any interaction to an object will cause a reaction which might or might not be
+of great importance to the progress of your game.
+
+--[ 3 - Currently Implemented Features
+
+This is a list of features which are currently implemented and it will be
+continued as the development progresses.
+
+----[ 3.1 - Objects
+
+ - Doors: As of now you can open every door there is by simply interacting
+          with it.
+
+----[ 3.2 - NPCs
+
+ - Bats: Bats are going to hurt you and you are able to fight back by
+   interacting with them.
+
+--[ 4 - Implementation
+
+This is a simple documentation on how to create interaction in our world.
+
+----[ 4.1 - Interactable Objects as Entities
+
+Every interactable object is derived from the "Entity" class. Which requires
+the derived classes to implement the "Reaction()" method if you want to make it
+interactable. If it is not implemented by the derived classes no instance will
+ever respond to interaction.
+
+If any derived class implements the "Interact()" method it is able interact
+with the world as well. Enemies for example might also be able to open doors
+or NPCs might want to talk to you even though you don't want to. The actual
+implementation depends on the entity.
+
+----[ 4.2 - Actual Implementation
+
+One of the most important parts of the code is the game object which holds
+references to each entity there is in the game (the current level). Each
+Entity also holds a reference to the game object. This enables each entity
+to request the status of any other entity and thus enabling them to interact
+with each other.
+
+If an entities "Interact()" method is called its argument of type "Vec2"
+specifies the target tile on which an interactable object might be located.
+The second argument is of Type "Interaction" here you can pass some kind of
+interaction which was derived from class "Interaction". If the environment
+interacts with the player the Interaction objects are stored as an attribute
+to a queue in the player object.
+
+This vector is then passed to the game object by calling its "InteractWith()"
+method which then searches for the entity in its references by using the
+target position. If it couldn't find any entity it simply does nothing but if
+it found an entity it calls the targets "React()" method and is passing an
+"Interaction" object to the target entity.
+
+The "React()" method takes the "Interaction" object as an argument. This is
+necessary to implement different kinds of interactions. There is a difference
+between an "attack" and an "use" Interaction! You can then implement the
+"React()" method so that an entity reacts accordingly to an interaction.
+
+An "Interaction" object has a type and two parameters ("param1", "param2") of
+type integer which you are free to specify depending on the interaction. If you
+for example implement an attack as an interaction you might want to specify the
+damage that it does to the target entity. Note that this interface is very
+C-like and very likely to be changed in the future.
+
+--[ 5 - Ideas for the Future
+
+ # Doors
+ - Make doors lockable and unlockable by using keys. (requires inventory and
+   item system)
+ -- Make locked doors destroyable by kicking them in or by using weapons such
+    as axes. (requires combat system)
+ -- Make special doors unlockable by interacting with some kind of switch.
+...
+

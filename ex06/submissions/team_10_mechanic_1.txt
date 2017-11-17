@@ -1,0 +1,36 @@
+### Game Mechanic: Status Effects
+
+Status effects modificate the status of a player. Examples include:
+- Poisoning
+- Confusion
+- On fire
+- etc.
+
+## Definition of the Status Effects
+
+We define a class to hold information about a status effect and to actually 
+perform the modifications on the player.
+
+    |---------------------------|
+    |StatusEffect               |
+    |---------------------------|
+    | -duration : double        |
+    | +update(player : Player)  |
+    | +isExpired() : bool       |
+    |---------------------------|
+
+The StatusEffect is an abstract base for individual status effects. 
+
+The individual status effects must implement the update method, which 
+modifies the player and reduces the duration. If the duration is less 
+than or equal to zero, the status effect is expired and no action is
+performed when the update method is called. In this case, the isExpired method
+returns true.
+
+The player contains a list of status effects whose update methods are called
+for every step the player takes, i.e. status effects are tied to walking. There
+will be no effect on the player while it is just sitting still.
+
+Expired status effects are removed at this point. In addition, it should be 
+possible to add status effects to the player, i.e. there has to be a public
+method for this in the Player class.

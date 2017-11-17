@@ -1,0 +1,50 @@
+Team 01
+ABOUT
+This file contains the definition of the first game mechanic.
+
+MECHANIC
+Our first game mechanic is the implementation of a sound engine.
+This doubles as a basic form of feedback to the player.
+
+REQUIREMENTS
+The requirement of this feature is the SDL2_Mixer package
+(and the basic SDL2 package).
+
+
+IMPLEMENTATION
+sound:
+    The Mechanic has been implemented by creating a new class called "Sound"
+    in the file sound.cc
+
+game:
+    The Game class has been altered by creating said Sound class with said
+    game as a parameter in the Constructor in game.cc:
+
+    Game::Game() : sound_engine(Sound(*this)){
+        ...
+    }
+
+    and the variable definition in game.h
+    Sound sound_engine;
+
+resource_loader:
+    Two functions have been added to the resource_loader:
+
+    Mix_Chunk* loadSound(std::string filename);
+    Mix_Music* loadMusic(std::string filename);
+
+    Alongside with two according maps:
+
+    std::map<std::string, Mix_Music*> loaded_music;
+    std::map<std::string, Mix_Chunk*> loaded_sounds;
+
+    similar to loadSprite, those functions load everything into the according
+    map first, and search for it there first before reloading it.
+    The only parameter required is the name of the soundfile, that has
+    to exist in the given resource folder.
+
+CALLING
+The call to the game_engine for e.g. walking in the player entity is as follows
+
+game.sound_engine.playSound(walkFilename);
+

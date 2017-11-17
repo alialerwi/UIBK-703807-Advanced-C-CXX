@@ -1,0 +1,40 @@
+### Game Mechanic 2: Spell Casting ###
+
+
+*** General ***
+
+Our dungeon crawler will support spell casting by the player. We will add an
+additional key (e.g. spacebar) to trigger spell casting. When the key is
+pressed it should generate a new spell with the direction of the player, the
+position of the player and an attribute called "spell range". This spell range
+is needed in order to realize that the spell affects only in a specific range.
+Any system with damage points is not needed at this moment as there are no
+enemies implemented yet. So when a spell is spawn, it travels along the given
+path and direction until is should disappear (see next section).
+
+
+*** Disappearance of spells ***
+
+There are 2 possibilities when a spell should vanish from the map: Either a
+spell goes out of it's spell range or it collides independent of it's travelled
+distance with other entities like walls or probably later on some enemies. For
+the vanishing of spells outside their range, it is needed to save the start
+position of the spell, where it was casted (i.e. the player's position at spell
+cast) and some distance measurement to recognize it, if spells exceed their
+range. In each update step the current position of the travelling spell is
+taken to calculate the euclidean distance to it's initial position.
+
+The disappearance of spells due to collision is done like it is done for the
+player. We first get the position of the entities in front and if they have
+their attribute "collidable" set to true then we know that there will occur
+a collision and the spell should disappear. Also note that a spell cannot be
+casted by a player, if the player is directly in front of a wall. Otherwise it
+can happen that the spell is casted "inside the wall", then a collision is
+detected and the spell gets removed afterwards. Nevertheless, you will see it
+for a short duration inside the wall. So we have to check for a possible
+collision before casting the spell. If there is no obstacle in front, the spell
+will be spawned, otherwise not.
+
+In both cases, collision or out of range, the spell's attribute "isRendered" is
+set to false and all entities which have this parameter set to false are
+deleted from the existing entities and won't be rendered anymore.

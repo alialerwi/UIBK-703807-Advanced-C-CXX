@@ -1,0 +1,47 @@
+This file contains the changes done by us (Team 01).
+
+The first change that we implemented was the ability to load an initial map.
+The map is structured like a matrix, is located in the /resources/maps folder
+and a typical map can look like the following:
+
+***************
+*             *
+*             *
+*             *
+*             *
+*             *
+*             *
+*     p       *
+*             *
+*             *
+*             *
+*             *
+*             *
+*             *
+***************
+
+The symbols in the matrix all define different game objects that will be placed
+in the game after the map is loaded and represent the following:
+'*' is a wall.
+' ' is floor (walkable).
+'p' is the start point of the player character.
+
+To be able to represent the objects in the game world we created new entities
+named floor and wall in the application. They are initialized with different
+sprites that match their purposes.
+
+We also changed the SPRITE_WIDTH and SPRITE_HEIGTH to 16 to match our object
+sprites and the new player character sprites that we introduced.
+
+To implement collision detection we changed the entity class to contain
+information about the type of game object it is in the world. Before a move of
+the player character is done, we check if the future position is invalid
+according to the type of the object the player would move on to. Based on this,
+we enable or disable movement in this direction.
+
+We also introduced a camera that follows the player character along his
+adventure. By simply applying the formula 'SCREEN = WORLD - CAMERA' we render
+the entities according to their position on the screen created by the offset of
+our camera. Furthermore for every movement the player does, the camera
+coordinates are calculated accordingly.
+

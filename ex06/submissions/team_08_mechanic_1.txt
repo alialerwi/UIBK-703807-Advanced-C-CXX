@@ -1,0 +1,52 @@
+# Entity Conditions
+
+## Overview
+
+Each entity has to be able to have either no or one of the following
+conditions:
+
+- on fire
+- frozen
+- chained
+
+These three conditions are to be represented graphically by rendering a
+sprite picturing the respective condition on top of the affected entity.
+
+Every entity, not just players, have to support those conditions.
+
+An entity can only have one condition at once. If an entitiy has an active
+condition, setting a new condition will overwrite this currently active
+condtition.
+
+## API
+
+Each entity must provide an interface to perform the following actions:
+
+- Setting a new condition, overwriting any currently active condition
+- Getting the current condition
+- Removing the current condition, yielding in a condition free entity
+- Checking if a condition is currently active
+
+## Implementation
+
+The following is an outline on how to implement such conditions:
+
+- Create a `Condition` class that owns a `SpriteSet` representing the condition
+- Create a `ConditionType` class that represents the different condition types
+  specified above
+- The `Condition` class should be initialized with a certain `ConditionType`
+  and depending on the type load the appropriate sprite set.
+- Extend the `Entity` class to have an optional `Condition` member
+- Provide the getter, setter, etc. specified above
+- In `Game::renderFrame` for each entity check if it has a condition after
+- If the entity has a condition, render the condition sprite after
+  rendering the respective entity so that the condition sprite is rendered on
+  top of the entity sprite.
+
+## Sprites
+
+The used sprites are openly licensed and can be found via the following links:
+
+- https://opengameart.org/content/fireflame
+- https://opengameart.org/content/snow-flake
+- https://opengameart.org/node/15701

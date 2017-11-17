@@ -1,0 +1,75 @@
+##########
+#MONSTERS#
+##########
+
+The game's monsters must act according to following rules:
+
+    - monsters are stationary or move either straight horizontally or
+      straight vertically
+
+    - the direction of their movement inverts when they hit a wall or
+      the player
+        
+        Example:
+
+            ########
+            #......#
+            #<--M..#
+            #......#
+            #......#
+            ########
+
+            Monster M moves horizontally to the left, following the arrow,
+            until it hits the wall, then:
+
+            ########
+            #......#
+            #M---->#
+            #......#
+            #......#
+            ########
+
+            Monster M turns to the right and follows the arrow until
+            it hits the right wall, turns left again etc.
+
+    - monsters only have ranged attacks that work similar to the player's:
+
+        * 3 consecutive blocks are affected
+
+        * always deald deadly damage to the player and no damage to other
+          monsters
+
+        * only 1 projectile at a time per monster on the screen
+
+        * projectiles are always fired as soon as the previous one disappears
+
+        * there is a delay in projectile movement from block to block to make
+          it slow enough to react to
+
+        * projectiles are always fired orthogonally to the direction
+          of movement
+        
+        Example:
+
+            ########
+            #......#
+            #<--M..#
+            #...x..#
+            #...x..#
+            ########
+
+            Monster M moves along the arrow and fires projectiles in the
+            direction marked by x
+
+    - monsters have 4 health points which means that the player needs to
+      deal 2 melee attacks or 4 ranged attacks to the same monster to kill it.
+      This difference is meant to be a reward for taking the risk of getting
+      close to the monster. The health points are NOT shown on screen
+      (just like in the old Zelda games)
+
+    - when a monster is hit by an attack, there should be visual cues confirming
+      that it was hit (blinking in a different colour or something like that)
+
+    - when monsters are killed, they are removed from the screen and
+      will not respawn
+      

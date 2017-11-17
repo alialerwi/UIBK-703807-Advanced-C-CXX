@@ -1,0 +1,81 @@
+ _______  _______  _______           _______
+(  ____ )(  ___  )(  ____ \|\     /|(  ____ \
+| (    )|| (   ) || (    \/| )   ( || (    \/
+| (____)|| |   | || |      | |   | || (__
+|     __)| |   | || | ____ | |   | ||  __)
+| (\ (   | |   | || | \_  )| |   | || (
+| ) \ \__| (___) || (___) || (___) || (____/\
+|/   \__/(_______)(_______)(_______)(_______/
+ _       _________ _        _______
+( \      \__   __/| \    /\(  ____ \
+| (         ) (   |  \  / /| (    \/
+| |         | |   |  (_/ / | (__
+| |         | |   |   _ (  |  __)
+| |         | |   |  ( \ \ | (       =========================
+| (____/\___) (___|  /  \ \| (____/\ not a star wars story ...
+(_______/\_______/|_/    \/(_______/ =========================
+preliminary working title
+
+=================================
+Feature Overview
+=================================
+
+* Turn-based, randomized gameplay
+* Level loading from files using easy to use text-based format
+* Multiple connected levels
+* Different terrain types which affect gameplay
+* Interactions with game world
+* Basic combat system
+* In-game HUD
+* Fog-of-war using shadow-casting (cosmetic only)
+
+=================================
+Changes Made to Provided Code Base
+=================================
+
+* As we use the Google C++ Style Guide, we converted the provided code base
+  accordingly.
+
+* We changed the player sprite such that it is oriented properly, depending
+  on the direction the player last moved in.
+
+* We store an additional pointer to the player entity within game for easier
+  access.
+
+* We made the main SDL window resizable and changed the default resolution to
+  720p as it is 2017.
+
+* We made Entity::Move virtual as various entities may want to implement
+  different collision logic etc.
+
+* We renamed Entity::Update to Entity::HandleEvents, as it is
+  responsible for handling the various events provided by SDL on every frame.
+
+* A new Entity::Update method handles the advancement of time in our turn-based
+  gameplay system.
+
+* We added support for VI-keys for movement, as well as diagonal movement.
+
+* Different types of tiles (for now: grass, stone floors and walls) are
+  loaded and used to build a level. Collision was implemented in such a way
+  that the player might walk over all types of ground, but not through walls.
+  This is currently hardcoded depending on the tile type, because as of now we
+  only have a handful.
+
+* Sometimes it's useful to present some text to the player, so we're using
+  an additional SDL component (SDL2_ttf) to provide a barebones HUD. At the
+  moment it's used for HP and some debugging information like player position,
+  but will become more useful for combat (e.g., to let players know that they
+  are being stabbed).
+
+* Level loading was implemented according to task 2. The map format is simply
+  a plain text files with some defined mapping between ASCII characters and
+  tile type, because that makes it easy to edit levels. In particular: we
+  don't have to write a level editor.
+
+* Loading of levels suggests that it should be possible to have multiple levels
+  in one game, so we implemented holes as an additional tile type that players
+  can fall through to get to the next level.
+
+* View scrolling was implemented according to task 2. Additionally, shadow
+  casting was implemented to provide a more realistic field of view.
