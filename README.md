@@ -11,7 +11,7 @@
 | 2017-11-24 | [Stepping it up]         | [Knight Artorias]     |
 | 2017-12-01 | [Extending your Toolbox] | [Deacons of the Deep] |
 | 2017-12-15 | [This and That]          | [Ornstein and Smough] |
-| 2018-01-12 |                          |                       |
+| 2018-01-12 | [Meta]                   | [Abyss Watcher]       |
 | 2018-01-19 |                          |                       |
 | 2018-01-26 |                          |                       |
 | 2018-02-02 |                          |                       |
@@ -24,6 +24,7 @@
 [Stepping it up]: ex06
 [Extending your Toolbox]: ex07
 [This and That]: ex08
+[Meta]: ex09
 
 [Iudex Gundyr]: https://www.youtube.com/watch?v=J8J7ZB4vJkg
 [Dragon Rider]: https://www.youtube.com/watch?v=dk4qf7rP8k0
@@ -31,6 +32,7 @@
 [Knight Artorias]: https://www.youtube.com/watch?v=rgy1TV12LDc
 [Deacons of the Deep]: https://www.youtube.com/watch?v=LHz1dS37v9c
 [Ornstein and Smough]: https://www.youtube.com/watch?v=QHDPr07hyzs
+[Abyss Watcher]: https://www.youtube.com/watch?v=vv_qryPwmig
 
 The lab will take place in RR15.
 
